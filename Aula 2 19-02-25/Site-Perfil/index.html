@@ -15,15 +15,15 @@
     <header class="bg-secondary text-center sticky-top text-white">
       <h1>Meu Site</h1>
       <nav>
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#sobre">Sobre</a>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item bg-dark img-thumbnail">
+            <a class="nav-link " href="#sobre">Sobre</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#projetos">Projetos</a>
+          <li class="nav-item bg-secondary img-thumbnail">
+            <a class="nav-link" href="#projetos">Projetos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#contato">Contato</a>
+          <li class="nav-item bg-dark img-thumbnail">
+            <a class="nav-link" href="#contato">Contato</a>
           </li>
         </ul>
       </nav>
@@ -64,19 +64,70 @@
 
     <br>
 
-    <section id="projetos" class="...">
+    <section id="projetos" class="bg-secondary bg-secondary m-0 p-0">
+      <h2 class="text-white p-3">Projetos</h2>
+      <h5 class="text-white pl-3 m-0 ">Projetos pessoais e feitos através do curso de desenvovimento de sistemas</h5>
+      <div class="row p-3 justify-content-center">
+        <div class="card col-6 col-md-4 m-3" style="width: 18rem;">
+          <img class="card-img-top" src="img/Projeto_1.png" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Concessionária</h5>
+            <p class="card-text">Projeto feito durante o curso de Desenvolvimento de Sistemas no Senai, consiste em um sistema de gerenciamento e vendas para uma concessionária.</p>
+            <a href="https://github.com/ga6rielsilva/Concessionaria" target="_blank" class="btn btn-primary">Visitar</a>
+          </div>
+        </div>
+        <div class="card col-6 col-md-4 m-3" style="width: 18rem;">
+          <img class="card-img-top" src="img/Projeto_2.png" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Monitor de Trânsito</h5>
+            <p class="card-text">Projeto pessoal com intuito de monitorar o transito em certas regiões</p>
+            <a href="https://github.com/WellyRudnick/Consulta-Transito-RealTime" target="_blank" class="btn btn-primary">Visitar</a>
+          </div>
+      </div>
     </section>
 
     <br>
 
-    <section id="contato" class="...">
+    <section id="contato" class="bg-secondary text-white m-0 p-0">
+      <h2 class="text-white p-3">Contato</h2>
+      <h5 class="text-white pl-3 m-0 ">Entre em contato comigo</h5>
+      <div class="row p-3">
+        <div class="col-6 col-md-">
+          <form>
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="3"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-6 col-md-">
+          <h5>Redes Sociais</h5>
+          <p>Entre em contato comigo através das redes sociais</p>
+          <ul class="list-group list-group-flush w-50">
+            <a href="https://www.linkedin.com/in/wellysonrudnick/" target="_blank" class="btn btn-primary m-2">Linkedin</a>
+            <a href="http://instagram.com/welly_rudnick" target="_blank" class="btn btn-primary m-2">Instagram</a>
+            <a href="https://x.gd/PUjfQ" target="_blank" class="btn btn-primary m-2">Whatsapp</a>
+          </ul>
+        </div>
     </section>
 
     <br>
-
-    <footer class="...">
-    </footer>
+        <footer class="bg-secondary text-white text-center p-3 ">
+          <p class="m-2">Desenvolvido por <a href="http://github.com/wellyrudnick" target="_blank" class="text-decoration-none text-white">Wellyson Rudnick</a></p>
+        </footer>
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
