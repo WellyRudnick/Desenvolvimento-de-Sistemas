@@ -7,18 +7,25 @@
     <title>Busca de Usuários</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Noto Serif KR', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
     <div class="container mt-5">
         <h2 class="text-center mb-4">🔍 Buscar Usuário</h2>
 
-        <!-- Campo de entrada e botão -->
         <div class="input-group mb-3">
             <input type="number" id="userId" class="form-control" placeholder="Digite o ID do usuário (1 a 10)">
             <button id="searchButton" class="btn btn-primary">Buscar</button>
             <button id="clearButton" class="btn btn-danger"><i class="bi bi-trash"></i></button>
         </div>
+
         <div id="error" class="mt-4"></div>
 
         <div id="loading" class="text-center my-3" style="display: none;">
@@ -27,7 +34,6 @@
             </div>
         </div>
 
-        <!-- Área para exibir os resultados -->
         <div id="userInfo" class="mt-4"></div>
     </div>
 
@@ -37,54 +43,54 @@
             let userInfoDiv = document.getElementById("userInfo");
             let errorDiv = document.getElementById("error");
             let loadingDiv = document.getElementById("loading");
+            let searchButton = document.getElementById("searchButton");
 
             errorDiv.innerHTML = "";
 
             if (!userId || userId < 1 || userId > 10) {
                 errorDiv.innerHTML = `
-                    <div class="alert alert-danger">ID inválido! Digite um número entre 1 e 10.</div>
+                <div class="alert alert-danger">ID inválido! Digite um número entre 1 e 10.</div>
                 `;
                 return;
             }
 
             if (document.getElementById(`user-${userId}`)) {
                 errorDiv.innerHTML = `
-                    <div class="alert alert-warning">Usuário já exibido!</div>
+                <div class="alert alert-warning">Usuário já exibido!</div>
                 `;
                 return;
             }
-            
+
+            searchButton.disabled = true;
+
             loadingDiv.style.display = "block";
 
-            // TODO: Completar a requisição AJAX usando fetch()
             fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 .then(response => response.json())
                 .then(user => {
-                    // TODO: Exibir os dados do usuário no HTML
                     let userCard = document.createElement("div");
                     userCard.classList.add("card", "mb-3");
+                    userCard.style = "background-color: #17a3b828; border: 1px solid #17a3b8;"
                     userCard.id = `user-${userId}`;
-                    userCard.innerHTML =`
-                        <div class="card">
-                            <div class="card-body" style="background-color: #17a3b828; border: 1px solid #17a3b8;">
+                    userCard.innerHTML = `                        
+                            <div class="card-body">
                                 <h5 class="card-title">${user.name}</h5>
                                 <p class="card-text"><strong>Id:</strong> ${user.id}</p>
                                 <p class="card-text"><strong>Email:</strong> ${user.email}</p>
                                 <p class="card-text"><strong>Telefone:</strong> ${user.phone}</p>
                                 <p class="card-text"><strong>Empresa:</strong> ${user.company.name}</p>
                             </div>
-                        </div>
                     `;
                     userInfoDiv.appendChild(userCard);
                 })
                 .catch(error => {
-                    // TODO: Exibir mensagem de erro amigável
                     errorDiv.innerHTML = `
                         <div class="alert alert-danger">Usuário não encontrado!</div>
                     `;
                 })
                 .finally(() => {
                     loadingDiv.style.display = "none";
+                    searchButton.disabled = false;
                 });
 
             document.getElementById("clearButton").addEventListener("click", function () {
