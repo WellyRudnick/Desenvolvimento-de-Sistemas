@@ -22,7 +22,7 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #343838;">
         <div class="container">
             <a class="navbar-brand" href="#page-top">home</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
@@ -34,17 +34,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#portfolio">Portfolio</a></li>
+                            href="#portfolio">Portfólio</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">About</a></li>
+                            href="#about">Sobre</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contact">Contact</a></li>
+                            href="#contact">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead text-white text-center"  style="background-color: #005f6b;">
         <div class="container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <img class="masthead-avatar mb-5 rounded-circle" src="assets/img/profile_photo.enc" alt="..." />
@@ -76,30 +76,17 @@
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"  style="background-color: #005f6bd5;">
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
                         <img class="img-fluid" src="assets/img/portfolio/Concessionaria.png" alt="..." />
                     </div>
                 </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="assets/img/portfolio/Rastreio.png" alt="..." />
-                    </div>
-                </div>
                 <!-- Portfolio Item 3-->
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"  style="background-color: #005f6bd5;">
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
@@ -110,10 +97,10 @@
         </div>
     </section>
     <!-- About Section-->
-    <section class="page-section bg-primary text-white mb-0" id="about">
+    <section class="page-section text-white mb-0" id="about" style="background-color: #005f6b;">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-white">Sobre</h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -135,7 +122,7 @@
     <section class="page-section" id="contact">
         <div class="container">
             <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Entre em contato</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -157,23 +144,23 @@
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" type="text" placeholder="Enter your name..."
                                 data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            <label for="name">Nome Completo</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">* Necessário Preencher.</div>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
+                            <input class="form-control" id="email" type="email" placeholder="nome@examplo.com"
                                 data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            <label for="email">Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">* Necessário Preencher.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email inválido.</div>
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 12345-6789"
                                 data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                            <label for="phone">Telefone</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">* Necessário Preencher.
                             </div>
                         </div>
                         <!-- Message input-->
@@ -181,10 +168,11 @@
                             <textarea class="form-control" id="message" type="text"
                                 placeholder="Enter your message here..." style="height: 10rem"
                                 data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
+                            <label for="message">Messagem</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">* Necessário Preencher.
                             </div>
                         </div>
+                        
                         <!-- Submit success message-->
                         <!---->
                         <!-- This is what your users will see when the form-->
@@ -205,8 +193,9 @@
                         <div class="d-none" id="submitErrorMessage">
                             <div class="text-center text-danger mb-3">Error sending message!</div>
                         </div>
+
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                        <button class="btn btn-info btn-xl disabled" id="submitButton" type="submit">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -228,7 +217,7 @@
         </div>
     </footer>
     <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
+    <div class="copyright py-4 text-center text-white" style="background-color: #343838;">
         <div class="container"><small>Copyright &copy; Wellyson Rudnick 2025</small></div>
     </div>
     <!-- Portfolio Modals-->
@@ -269,44 +258,6 @@
                                 </div>
 
                                 <a href="https://www.github.com/ga6rielsilva/Concessionaria" target="_blank">
-                                    <button class="btn btn-dark btn-lg" data-bs-dismiss="modal" style="width: 75px;">
-                                        <i class="bi bi-github"></i>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio Modal 2-->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Rastreio de veículos</h2>
-                                <!-- Icon Divider-->
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/Rastreio.png" alt="..." />
-                                <!-- Portfolio Modal - Text-->
-                                <div class="text-start">
-                                    <h2>Rastreio de veículos</h2>
-                                    <p>Este projeto pessoal é uma interface web responsiva para rastreamento de veículos, permitindo a busca simultânea de até quatro veículos por meio de um sistema de conversão de prefixos para placas. Desenvolvido com HTML, CSS e Bootstrap, ele apresenta uma grade 2x2 onde cada campo de busca carrega um mapa interativo em um iframe. A interface é otimizada para facilitar a pesquisa rápida e visualização das localizações dos veículos.</p>
-                                </div>
-                                <a href="https://github.com/WellyRudnick/Rastreio-Catarinense" target="_blank">
                                     <button class="btn btn-dark btn-lg" data-bs-dismiss="modal" style="width: 75px;">
                                         <i class="bi bi-github"></i>
                                     </button>
